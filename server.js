@@ -255,7 +255,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-five',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui' ,'article-five.html')); 
+   res.send(template(articlefive)); 
 });
 
 app.get('/:articleName',function(req,res){
