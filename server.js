@@ -105,7 +105,7 @@ var articlefive={
   title4:'mummy',
   title5:'papa',
   title6:'raju',
-  title7:'bajju'
+  
 };
 
 function template(data){
@@ -115,7 +115,7 @@ function template(data){
     var title4=data.title4;
     var title5=data.title5;
     var title6=data.title6;
-    var title7=data.title7;
+    
     
     var html_template=`
         <html>
@@ -206,7 +206,7 @@ function template(data){
 				${title1};
 			</div>
 		</div>
-		<div id="wrapper">${title7}
+		<div id="wrapper">
 			<div id="content" >
 				<div id="subcontent1">
 					${title2}
