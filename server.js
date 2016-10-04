@@ -98,6 +98,10 @@ var htmlTemplate=`<html>
 return htmlTemplate;
 }
 
+app.get('/article-five',function(req,res){
+   res.sendFile(path.join(__dirname, 'ui' ,'article-five.html')); 
+});
+
 app.get('/article-four',function(req,res){
     res.send(Createtemplate(articleFour));
 });
