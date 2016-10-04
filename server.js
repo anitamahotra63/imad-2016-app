@@ -98,7 +98,137 @@ var htmlTemplate=`<html>
 return htmlTemplate;
 }
 
+var articlefive={
+  title1:'anita',
+  title2:'sunita',
+  title3:'anuj',
+  title4:'mummy',
+  title5:'papa',
+  title6:'raju',
+  title7:'bajju'
+};
 
+function template(data){
+    var title1=data.title1;
+    var title2=data.title2;
+    var title3=data.title3;
+    var title4=data.title4;
+    var title5=data.title5;
+    var title6=data.title6;
+    var title7=data.title7;
+    
+    var html_template=`
+        <html>
+<head>
+	<title>
+		Layout 10
+	</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		#container{
+			background-color: yellow;
+			height: 648px;
+			width:700px;
+			border: 3px grey solid;
+			margin: 2px;
+		}
+		#header{
+			width:650px;
+			height: 130px;
+			border:4px grey solid;
+			margin: 70px 21px 10px;
+			background-color: white;
+		}
+		#wrapper{
+			height:300px;
+			width:650px;
+			border:4px grey solid;
+			background-color: white;
+			margin: 0 21px 10px;
+		}
+		#footer{
+			height: 70px;
+			width:650px;
+			border: 4px grey solid;
+			background-color: white;
+			margin:0 21px 20px;
+		}
+		#content{
+			width:340px;
+			height:240px;
+			border:4px grey solid;
+			background-color: white;
+			margin:50px 15px 2px 5px;
+			display: inline-block;
+		}
+		#sidebar{
+			height:240px;
+			border:4px grey solid;
+			background-color: white;
+			margin:50px 7px 2px 0;
+			width:267px;
+			display: inline-block;
+			float: right;
+			
+		}
+		#subcontent1{
+			height:60px;
+			border:1px grey solid;
+			width:328px;
+			margin:68px 5px 8px;
+			background-color: white;
+		}
+		#subcontent2{
+			height:60px;
+			border:1px grey solid;
+			width:328px;
+			margin:0 5px 40px;
+			background-color: white;
+		}
+		#nav{
+			border:4px grey solid;
+			height:40px;
+			background-color: white;
+			width:622px;
+			margin:60px 10px 22px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+	
+		<div id="header">${title6}
+			<div id="nav">
+				${title1};
+			</div>
+		</div>
+		<div id="wrapper">${title7}
+			<div id="content" >
+				<div id="subcontent1">
+					${title2}
+				</div>
+				<div id="subcontent2">
+					${title3}
+				</div>
+			</div>
+			<div id="sidebar">
+			${title4}	
+			</div>
+		</div>
+		<div id="footer">
+			${title5}
+		</div>
+	</div>
+
+</body>
+</html>`;
+return html_template;
+    
+}
 
 app.get('/article-four',function(req,res){
     res.send(Createtemplate(articleFour));
