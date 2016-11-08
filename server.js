@@ -288,7 +288,13 @@ app.get('/:articleName',function(req,res){
     res.send(createTemplate(articlesContent[articleName]));
 });
 
+app.get('/AboutUs',function(req,res){
+   res.sendFile(path.join(__dirname,'ui','AboutUs.html')); 
+});
 
+app.get('/Registeration',function(req,res){
+   res.sendFile(path.join(__dirname,'ui','Registeration.html')); 
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
