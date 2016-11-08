@@ -1,15 +1,33 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
-    
 }
 *{
-			padding:0;
-			margin: 0;
-		}
-		
-#content{
-		font-family: Gabriola;
-		font-size: x-large;
-		margin: 10px 50px;
-	}	
+       margin:0;
+       padding:0;
+     }
+.allpic{
+              
+              height: 530px;
+              width: 900px;
+              margin: 10px auto;
+              
+            }
+.pic{
+          display: inline-block;
+          height: 246px;
+          border: 1px solid black;
+          width:396px;
+
+        }
+.aboutus{
+               border: 2px solid black;
+               height: 45px;
+               width: 210px;
+               background-color: white;
+               border-radius: 30px;
+               font-size: xx-large;
+               margin: 15px auto;
+               padding: 10px;
+
+            }
