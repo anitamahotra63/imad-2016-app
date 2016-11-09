@@ -1,70 +1,25 @@
-body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-}
-*{
-       margin:0;
-       padding:0;
-     }
-.allpic{
-              
-              height: 530px;
-              width: 900px;
-              margin: 10px auto;
-              
-            }
-.pic{
-          display: inline-block;
-          height: 246px;
-          border: 1px solid black;
-          width:396px;
 
-        }
-.aboutus{
-               border: 2px solid black;
-               height: 45px;
-               width: 210px;
-               background-color: white;
-               border-radius: 30px;
-               font-size: xx-large;
-               margin: 15px auto;
-               padding: 10px;
-
-}
 *{
 			padding:0;
 			margin: 0;
-		}
-		
-	#content{
-		font-family: Gabriola;
-		font-size: x-large;
-		margin: 10px 50px;
-	}	
-.main{
-		  margin:50px auto;
-		  padding: 30px;
-		  border: 2px solid white;
-		  height: 800px;
-		  width: 800px;
-		  background-color: white;
-		  font-size: x-large;
-
-
-
-	}
-	p{
-		    font-family: cursive;
-      		font-weight: bolder;
-    		font-size: xx-large;
-    		color: grey;
-	}
-	body{
-		background-color:  #0b4c62;;
-	}
-	input{background-color: rgba(0, 188, 212, 0.25);
-	    padding: 5px;
-    width: 500px;
-    font-size: large;
-margin: 10px;
-border: lightblue;}
+}
+#upper{
+			height: 70px;
+			background-color: #0b4c62;
+}
+#heading{
+			height: 50px;
+			background-color: lightblue;
+			font-size: xx-large;
+			font-family: Gabriola;
+			padding: 5px 15px; 
+}
+p{
+    font-size:x-large;
+	font-family: Gabriola;
+}
+#link{
+    font-size: xx-large;
+	margin-left: 20px;
+	font-family:Gabriola;
+}
