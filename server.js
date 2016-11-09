@@ -9,7 +9,21 @@ app.get('/',function(req,res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
 });
 
+app.get('/WhatIsFeminism',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','ArticleOne.html'));
+});
 
+app.get('/FeministPersonalities',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','ArticleTwo.html'));
+});
+
+app.get('/Organisations',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','ArticleThree.html'));
+});
+
+app.get('/Issues',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','ArticleFour.html'));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
