@@ -48,7 +48,7 @@ var articles = {
 		<img src="http://hbz.h-cdn.co/assets/cm/15/03/480x720/54bbd8373c346_-_hbz-feminists-136703607.jpg" height="400px" width="300px"><br>
 		<strong><span style="font-size:xx-large ; font-family:Gabriola">Hillary Clinton</span></strong>
 		<hr>
-		<p>
+		<p class='second'>
 			The former First Lady is the only First Lady ever run for public office, serving as the first ever female Senator from the New York and the U.S Secretary Of State. Following her 2008 campaign for the Democratic nomination, Clinton re-emerged as one of the top candidates int the 2016 election-proving she's nt going to be held back. Clinton is doing her part to all but eradicate the glass ceiling.
 			Could this be the year of United States's first Female 
 			President?
@@ -57,28 +57,28 @@ var articles = {
 		<img src="http://hbz.h-cdn.co/assets/cm/15/03/480x720/54bbd842b136f_-_rexusa_1934802v.jpg" height="400px" width="300px"><br>
 		<strong><span style="font-size:xx-large ; font-family:Gabriola">Oprah Winfrey</span></strong>
 		<hr>
-		<p>
+		<p class='second'>
 			Motivated by the unequal pay she received in the start of her broadcasting career, Oprah set out to start her own television show and from there built an empire catering to helping women grow, develop and thrive, "I never did consider or call myself a feminist, but I don't think you can really be a woman in this world and not be." She has since developed the Oprah Winfrey Leadership Academy for Girls in South Africa, the Oprah Winfrey Network and was awarded the Presidential Medal of Freedom in 2013.
 		</p>
 		<br><br><br>
 		<img src="http://hbz.h-cdn.co/assets/cm/15/03/480x720/54bbd83095048_-_hbz-feminists-50308643.jpg" height="400px" width="300px"><br>
 		<strong><span style="font-size:xx-large ; font-family:Gabriola">Gloria Steinem</span></strong>
 		<hr>
-		<p>
+		<p class='second'>
 			Perhaps one of the most recognized faces of Feminism, Gloria Steinem led the women's liberation movements throughout the 60's and 70's. Co-founder of the feminist themed magazine, Ms. Steinem was co-founder of several female groups that changed the face of feminism including Women's Action Alliance, National Women's Political Caucus, Women's media Centre and more. All of her efforts led to her Induction into the National Women's Hall of Fame in 1993 and in 2013 she was honored with Presidential Medal of Freedom.
 		</p>
 		<br><br><br>
 		<img src="http://hbz.h-cdn.co/assets/cm/15/03/480x720/54bbd8366b3fc_-_hbz-feminists-120254709.jpg" height="400px" width="300px"><br>
 		<strong><span style="font-size:xx-large ; font-family:Gabriola">Sheryl Sandber</span></strong>
 		<hr>
-		<p>
+		<p class='second'>
 			The Fcaebook CEO is credited with pioneering the "Lean-In" movement with her book encouraging women to excel in the workforce. Both Snadberg and "Lean-In" co-sponsored 2014's 'Ban Bossy' campaign starring Condoleeza Rice, Beyonce, Jane Lynch and Jennifer Garner.
 		</p>
 		<br><br><br>
 		<img src="http://hbz.h-cdn.co/assets/cm/15/03/480x720/54bbd83dca22d_-_hbz-feminists-187708263.jpg" height="400px" width="300px"><br>
 		<strong><span style="font-size:xx-large ; font-family:Gabriola">Malala Yousafzai</span></strong>
 		<hr>
-		<p>
+		<p class='second'>
 			The courageous 17-year-old rose to fame with her memoir 'I am Malala' documenting her fearless journey as a youg student in Pakistan. Since, Malala has been travelling the world advocating for education rights for women and children.
 		</p>
 		<br><br><br>
