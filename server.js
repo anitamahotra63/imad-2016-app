@@ -178,17 +178,17 @@ app.get('/',function(req,res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
 });
 
-app.get('/:ArticleName',function(req,res){
-    var articleName=req.params.ArticleName;
-    res.send(createTemplate(articles[articleName]));
-});
-
 var names =[];
 app.get('/submit-name/:name',function(req,res){
     
     var name=req.params.name;
     names.push(name);
     res.send(JSON.stringify(names));
+});
+
+app.get('/:ArticleName',function(req,res){
+    var articleName=req.params.ArticleName;
+    res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
