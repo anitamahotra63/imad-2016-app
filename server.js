@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles = {
    
-    var Introduction:{
+    'Introduction':{
         title:'Introduction',
         heading:'What is Feminism?',
         content:`	<div id="content">
@@ -41,7 +41,7 @@ var articles = {
     	</div>`
     },
     
-    var Contribution:{
+    'Contribution':{
         title:'Contribution',
         heading:'Top Five Feminist Personalities',
         content:`<div id="content" style="margin:20px 100px">
@@ -86,7 +86,7 @@ var articles = {
 	</div>`
     },
     
-    var Organisations:{
+    'Organisations':{
        title:'Organisations',
        heading:'Some Women Organisations You Need To Know',
        content:`	<div id="content" style="background-image:url("http://www.randomhistory.com/photos/2015/feminism-gender-equality.jpg")">
@@ -119,10 +119,10 @@ var articles = {
 	</div>`
     },
     
-    var Issues:{
+    'Issues':{
         title:'Issues',
         heading:'Issues',
-        content=`<div id="content">
+        content:`<div id="content">
 		<div class="container" style="margin-left:40px">
 				<img src="http://now.org/wp-content/uploads/2014/02/Affirmative-Action-Protest-300-x-200.jpg" height="250px" width="400px">
 				<centre><strong>RACIAL JUSTICE</strong></centre><br>
@@ -183,8 +183,12 @@ app.get('/:ArticleName',function(req,res){
     res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/submit-name',function(req,res){
+var names =[];
+app.get('/submit-name/:name',function(req,res){
     
+    var name=req.params.name;
+    names.push(name);
+    res.send(JSON.stringify(names));
 });
 
 app.get('/ui/style.css', function (req, res) {
