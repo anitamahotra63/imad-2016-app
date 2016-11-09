@@ -6,7 +6,8 @@ var app=express();
 app.use(morgan('combined'));
 
 var articles = {
-    var Introduction :{
+   
+    var Introduction:{
         title:'Introduction',
         heading:'What is Feminism?',
         content:`	<div id="content">
