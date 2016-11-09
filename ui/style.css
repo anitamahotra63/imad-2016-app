@@ -23,3 +23,30 @@ p{
 	margin-left: 20px;
 	font-family:Gabriola;
 }
+	
+.first{
+			margin: 10px;
+	}
+#contentOne{
+			width: 800px;
+			display: inline-block;
+	}
+.second{
+			margin-right: 150px;
+	}
+.third{
+			margin-right: 500px;
+			margin-left: 20px;
+	}
+	
+.container{
+			height: 450px;
+			width: 400px;
+			margin: 10px;
+			display: inline-block;
+	}
+.fourth{
+			font-size:x-large;
+			font-family: Lucida ;
+			margin: 5px;
+	}
