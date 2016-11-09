@@ -118,7 +118,7 @@ var articles = {
 	</div>`
     },
     
-    var Issuesr:{
+    var Issues:{
         title:'Issues',
         heading:'Issues',
         content=`<div id="content">
