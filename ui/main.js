@@ -1,8 +1,8 @@
 //Submit Name
 
 var submit=document.getElementById('sbmt_btn');
-submit.onclick=function(req,res){
-    var request = new XMLHttprequest();
+submit.onclick=function(){
+    var request = new XMLHttpRequest();
     
     request.onreadystatechange=function(){
         if(request.readyState ===XMLHttpRequest.DONE){
