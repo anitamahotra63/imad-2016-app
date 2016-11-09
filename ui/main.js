@@ -1,6 +1,5 @@
 //Submit Name
-var nameInput=document.getElementById('name');
-var nameValue=nameInput.value;
+
 var submit=document.getElementById('sbmt_btn');
 submit.onclick=function(req,res){
     var request = new XMLHttprequest();
@@ -22,7 +21,8 @@ submit.onclick=function(req,res){
         
         //not done yet.
     };
-    
+    var nameInput=document.getElementById('name');
+    var nameValue=nameInput.value;
     request.open('GET','http://anitamahotra63.imad.hasura-app.io/submit-name?name='+nameValue,true);
     request.send(null);
 };
