@@ -178,11 +178,14 @@ app.get('/',function(req,res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
 });
 
-app.get('/:ArticleName,function(req,res){
+app.get('/:ArticleName',function(req,res){
     var articleName=req.params.ArticleName;
     res.send(createTemplate(articles[articleName]));
 });
 
+app.get('/submit-name',function(req,res){
+    
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
