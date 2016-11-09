@@ -10,8 +10,8 @@ var articles = {
     'Introduction':{
         title:'Introduction',
         heading:'What is Feminism?',
-        content:`	<div id="content">
-    		<p>
+        content:`	<div id="content" style="display:inline-block;">
+    		<p class='first'>
     			Feminism is an interdisciplinary approach to issues of equality and equity based on gender,<br> 
     			gender expression, gender identity, sex, and sexuality as understood through social theories<br> 
     			and political activism. Historically, feminism has evolved from the critical examination of<br> 
@@ -19,19 +19,19 @@ var articles = {
     			of gender and sexuality. 
     		</p>
     
-    		<p>
+    		<p class='first'>
     			Feminist theory now aims to interrogate inequalities and inequities along the intersectional lines<br> 
     			of ability, class, gender, race, sex, and sexuality, and feminists seek to effect change in areas where<br> 
     			these intersectionalities create power inequity. Intellectual and academic discussion of these inequities<br> 
     			allows our students to go into the world aware of injustices and to work toward changing unhealthy<br> 
     			dynamics in any scenario.
     		</p>
-    		<p>
+    		<p class='first'>
     			Feminist political activists campaign in areas such as reproductive rights, domestic violence, fairness<br>, 
     			social justice, and workplace issues such as family medical leave, equal pay, and sexual harassment<br> 
     			and discrimination. 
     		</p>
-    		<p>
+    		<p class='first'>
     			Anytime stereotyping, objectification, infringements of human rights, or intersectional oppression occurs,<br> 
     			it's a <strong>Feminist</strong> issue. 
     		</p>
