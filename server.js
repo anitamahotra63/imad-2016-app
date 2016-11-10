@@ -1,7 +1,17 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool = require('pg').Pool;
+var Pool = require('pg').Pool; //for connecting to the database
+
+var config= {
+    
+    user :'anitamahotra63',
+    database :'anitamahotra63',
+    host :'db.imad.hasura-app.io',
+    port :'5432',
+    password: process.env.DB_PASSWORD
+    
+}
 
 var app=express();
 app.use(morgan('combined'));
@@ -204,6 +214,24 @@ app.get('/submit-name',function(req,res){
 app.get('/:ArticleName',function(req,res){
     var articleName=req.params.ArticleName;
     res.send(createTemplate(articles[articleName]));
+});
+
+var pool=new Pool(config);
+app.get('/test-db',function(req,res){
+   //Mkae a select queuery 
+   //return the result in response
+   
+   pool.query("SELECT * FORM TEST", function(err, results){
+       if(err)
+       {
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send(JSON.stringify(result));
+       }
+   });
+   
 });
 
 app.get('/ui/style.css', function (req, res) {
