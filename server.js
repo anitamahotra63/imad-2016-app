@@ -19,7 +19,7 @@ var app=express();
 app.use(morgan('combined'));
 
 var pool=new Pool(config);
-app.get('/test-db',function(req,res){
+app.get('/testdb',function(req,res){
    //Mkae a select queuery 
    //return the result in response
    
