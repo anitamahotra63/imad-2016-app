@@ -30,7 +30,7 @@ app.get('/testdb',function(req,res){
        }
        else
        {
-           res.send(JSON.stringify(result));
+           res.send(JSON.stringify(result.rows));
        }
    });
    
