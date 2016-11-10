@@ -1,4 +1,4 @@
-//Submit Name
+//Submit username and password to login
 
 var submit=document.getElementById('sbmt_btn');
 submit.onclick = function(){
@@ -30,9 +30,9 @@ submit.onclick = function(){
    };
    var nameInput=document.getElementById('name');
     var nameValue=nameInput.value;
-   request.open('GET','http://anitamahotra63.imad.hasura-app.io/submit-name?name='+nameValue,true);
+   request.open('POST','http://anitamahotra63.imad.hasura-app.io/submit-name?name='+nameValue,true);
    
-   request.send(null);
+   request.send();
     
     
 };
