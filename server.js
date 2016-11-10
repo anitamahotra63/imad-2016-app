@@ -13,31 +13,11 @@ var config= {
     port :'5432',
     password: process.env.DB_PASSWORD
     
-}
-
-
+};
 
 var app=express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-
-var pool=new Pool(config);
-app.get('/testdb',function(req,res){
-   //Mkae a select queuery 
-   //return the result in response
-   
-   pool.query("SELECT * FROM test", function(err, results){
-       if(err)
-       {
-           res.status(500).send(err.toString());
-       }
-       else
-       {
-           res.send(JSON.stringify(result.rows));
-       }
-   });
-   
-});
 
 function createTemplate(data){
     var title=data.title;
@@ -69,7 +49,7 @@ app.get('/',function(req,res){
 
 function hash(input,salt){
      var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-     return ['pbkdf2S','10000','salt',hashed.toString('hex')].join('$');
+     return ['pbkdf2S','10000',salt, hashed.toString('hex')].join('$');
 }
 
 app.get('/hash/:input',function(req,res){
@@ -77,47 +57,22 @@ app.get('/hash/:input',function(req,res){
    res.send(hashedString);
 });
 
-app.post('/create-user',function(req,res){
-   var username=req.body.username;
-   var password=req.body.password;
+var pool=new Pool(config);
+app.get('/testdb',function(req,res){
+   //Mkae a select queuery 
+   //return the result in response
    
-   var salt=crypto.randomBytes(128).toString('hex');
-   
-   var dbString=hash(password,salt);
-   
-   pool.query('INSERT INTO "user" VALUES ($1,$2)',[username,dbString],function(err,result){
-        if(err){
-            res.status(500).send(err.toSring());
-        }
-        else{
-            res.send("User succesfully created-:"+username);
-        }
-   });
-});
-
-app.post('/login',function(req,res){
-   
-   var username = req.body.username;
-   var password = req.body.password;
-   
-   pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err,result){
-       if(err){
+   pool.query("SELECT * FROM test", function(err, results){
+       if(err)
+       {
            res.status(500).send(err.toString());
-       }else{
-           if(result.rows.length ===0){
-               res.status(403).send("username/password is invalid");
-           }else{
-               var dbString = result.rows[0].password;
-               var salt = dbString.split('$')[2];
-               var hashedPassword = hash(password,salt);
-               if(hashPassword ===dbString){
-                   res.send('Credentials are correct');
-               }else{
-                   res.send(403).send("Invalid username/password");
-               }
-           }
+       }
+       else
+       {
+           res.send(JSON.stringify(result.rows));
        }
    });
+   
 });
 
  var names=[];
