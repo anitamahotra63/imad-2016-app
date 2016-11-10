@@ -1,6 +1,6 @@
 //Submit username and password to login
 
-var submit=document.getElementById('sbmt_btn');
+var submit=document.getElementById('submit_button');
 submit.onclick = function(){
    
    //Create a request Object
