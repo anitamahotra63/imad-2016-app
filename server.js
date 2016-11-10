@@ -100,6 +100,9 @@ var articles = {
 		<p class='third'>
 			American Association of University Women advances equity for women and girls through advocacy, education, philanthropy and research. AAUW (formerly known as the American Association of University Women) is a nationwide network of more than 100,000 members and donors, 1,000 branches and 500 college and university institution partners.
 		</p>
+		<script>
+		    alert("Organisation which work for Women");
+		 </script>
 		<br><br><br>
 		<a href="http://www.gfwc.org/" id="link">General Federation of Women’s Clubs (GFWC)</a><br>
 		<p class='third'>
@@ -143,6 +146,9 @@ var articles = {
 					NOW advocates for wide range of economic justice issues affecting women including a living wage, job discrimination, pay equity, social security and pension reform and more.
 				</p>
 		</div>
+		<script>
+		    alert("Major Women Issues");
+		 </script>
 		<div class="container">
 			<img src="http://now.org/wp-content/uploads/2014/02/ERAYes-300-x-200.jpg" height="250px" width="400px">
 			<centre><strong >CONSTITUTIONAL EQUITY</strong></centre><br>
