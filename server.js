@@ -233,12 +233,12 @@ app.get('/submit-name',function(req,res){
 
 app.get('/articles/:ArticleName',function(req,res){
     
-    pool.query("SELECT * FROM articles WHERE title = '"+ req.params.Articlename+"'", function(err,result){
+    pool.query("SELECT * FROM articles WHERE title = '"+ req.params.ArticleName+"'", function(err,result){
         if(err){
             res.status(500).send(err.toSring());
         }
         else{
-            if(result.rows.length===0)
+            if(result.rows.length === 0)
             {
                 res.status(404).send("Article Not Found");
             }
