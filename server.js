@@ -13,8 +13,28 @@ var config= {
     
 }
 
+
+
 var app=express();
 app.use(morgan('combined'));
+
+var pool=new Pool(config);
+app.get('/test-db',function(req,res){
+   //Mkae a select queuery 
+   //return the result in response
+   
+   pool.query("SELECT * FORM test", function(err, results){
+       if(err)
+       {
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           res.send(JSON.stringify(result));
+       }
+   });
+   
+});
 
 //array of all the articles in our webpage
 var articles = {
@@ -214,24 +234,6 @@ app.get('/submit-name',function(req,res){
 app.get('/:ArticleName',function(req,res){
     var articleName=req.params.ArticleName;
     res.send(createTemplate(articles[articleName]));
-});
-
-var pool=new Pool(config);
-app.get('/test-db',function(req,res){
-   //Mkae a select queuery 
-   //return the result in response
-   
-   pool.query("SELECT * FORM test", function(err, results){
-       if(err)
-       {
-           res.status(500).send(err.toString());
-       }
-       else
-       {
-           res.send(JSON.stringify(result));
-       }
-   });
-   
 });
 
 app.get('/ui/style.css', function (req, res) {
