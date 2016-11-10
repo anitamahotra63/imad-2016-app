@@ -13,26 +13,24 @@ submit.onclick = function(){
            //Take some action
            
            if(request.status ===200){
-               //Capture a list of names and render it as a list
-               var names=request.responseText;
-               names=JSON.parse(names);
-               var list='';
-                for (var i=0;i<names.length;i++)
-                     {
-                        list +='<li>'+names[i]+'</li>';
-                     }
-                 var ul=document.getElementById('list');
-                ul.innerHTML=list;
-               
+               console.log("logged in successfully");
+               alert('Logged In Successfully');
+           }else if(request.status === 483){
+               alert('username/password is invalid');
+           }else if(request.status === 500){
+               alert('sorry! something went wrong with the server.');
            }
        }
        //not done yet
    };
-   var nameInput=document.getElementById('name');
-    var nameValue=nameInput.value;
-   request.open('POST','http://anitamahotra63.imad.hasura-app.io/submit-name?name='+nameValue,true);
+   var username = document.getElementById('username').value;
+   var password = document.getElementById('password').value;
+   console.log(username);
+   console.log(password);
    
-   request.send();
+   request.open('POST','http://anitamahotra63.imad.hasura-app.io/login',true);
+   request.setRequestHeader('Content-Type','application/json');
+   request.send(JSON.stringify({username: username, password: password}));
     
     
 };
