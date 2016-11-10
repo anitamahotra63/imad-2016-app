@@ -5,6 +5,7 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
+//array of all the articles in our webpage
 var articles = {
    
     'Introduction':{
@@ -18,7 +19,9 @@ var articles = {
     			inequality between the sexes to a more nuanced focus on the social and performative constructions<br> 
     			of gender and sexuality. 
     		</p>
-    
+            <script>
+                alert("Introduction to Feminism.");
+            </script>
     		<p class='first'>
     			Feminist theory now aims to interrogate inequalities and inequities along the intersectional lines<br> 
     			of ability, class, gender, race, sex, and sexuality, and feminists seek to effect change in areas where<br> 
@@ -53,6 +56,9 @@ var articles = {
 			Could this be the year of United States's first Female 
 			President?
 		</p>
+		<script>
+		    alert("People who have contributed majorly and has emerged as a Feminist Personalities.");
+		 </script>
 		<br><br><br>
 		<img src="http://hbz.h-cdn.co/assets/cm/15/03/480x720/54bbd842b136f_-_rexusa_1934802v.jpg" height="400px" width="300px"><br>
 		<strong><span style="font-size:xx-large ; font-family:Gabriola">Oprah Winfrey</span></strong>
