@@ -221,7 +221,7 @@ app.get('/test-db',function(req,res){
    //Mkae a select queuery 
    //return the result in response
    
-   pool.query("SELECT * FORM TEST", function(err, results){
+   pool.query("SELECT * FORM test", function(err, results){
        if(err)
        {
            res.status(500).send(err.toString());
