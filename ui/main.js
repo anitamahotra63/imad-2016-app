@@ -1,6 +1,6 @@
 //Submit username and password to login
 
-var log_in = document.getElementById('log_in');
+var log_in = document.getElementById(log_in);
 log_in.onclick = function(){
    
    //Create a request Object
