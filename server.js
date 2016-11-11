@@ -75,6 +75,8 @@ app.post('/create-user',function(req,res){
    });
 });
 
+
+
 app.get('/testdb',function(req,res){
    //Mkae a select queuery 
    //return the result in response
