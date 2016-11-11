@@ -40,20 +40,7 @@ submit_button_two.onclick = function(){
     
         var request = new XMLHttpRequest();
         
-         request.onreadystatechange = function(){
-       
-       if(request.readyState ===XMLHttpRequest.DONE){
-           //Take some action
-           
-           if(request.status ===200){
-               console.log("Registered successfully");
-               alert('Registered Successfully');
-           }else if(request.status === 403){
-               alert('some error');
-           }else if(request.status === 500){
-               alert('sorry! something went wrong with the server.');
-           }
-       }
+        
        //not done yet
    };
         
