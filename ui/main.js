@@ -15,7 +15,7 @@ submit.onclick = function(){
            if(request.status ===200){
                console.log("logged in successfully");
                alert('Logged In Successfully');
-           }else if(request.status === 483){
+           }else if(request.status === 403){
                alert('username/password is invalid');
            }else if(request.status === 500){
                alert('sorry! something went wrong with the server.');
@@ -29,7 +29,7 @@ submit.onclick = function(){
    console.log(password);
    
    request.open('POST','http://anitamahotra63.imad.hasura-app.io/login',true);
-   request.setRequestHeader('Content-Type','application/json');
+   request.setRequestHeader('Content-Type', 'application/json');
    request.send(JSON.stringify({username: username, password: password}));
     
     
