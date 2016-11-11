@@ -62,3 +62,9 @@ p{
 
 
 	}
+#frontPage{
+		    font-family: cursive;
+      		font-weight: bolder;
+    		font-size: xx-large;
+    		color: grey;
+	}
