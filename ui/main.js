@@ -34,3 +34,38 @@ submit.onclick = function(){
     
     
 };
+
+var submit_button_two = document.getElementById('submit_button2');
+submit_button_two.onclick = function(){
+    
+        var request = new XMLHttpRequest();
+        
+         request.onreadystatechange = function(){
+       
+       if(request.readyState ===XMLHttpRequest.DONE){
+           //Take some action
+           
+           if(request.status ===200){
+               console.log("Registered successfully");
+               alert('Registered Successfully');
+           }else if(request.status === 403){
+               alert('some error');
+           }else if(request.status === 500){
+               alert('sorry! something went wrong with the server.');
+           }
+       }
+       //not done yet
+   };
+        
+        var name = document.getElementById('name');
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        var idea = document.getElementById('idea');
+        var age = document.getElementById('age');
+        
+        request.open('POST','http://anitamahotra63.imad.hasura-app.io/create-user',true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({name: name, username: username, password: password, idea: idea, age: age}));
+} ;
+
+
