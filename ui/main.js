@@ -50,9 +50,9 @@ submit_button_two.onclick = function(){
         var idea = document.getElementById('idea');
         var age = document.getElementById('age');
         
-        request.open('GET','http://anitamahotra63.imad.hasura-app.io/create-user',true);
+        request.open('POST','http://anitamahotra63.imad.hasura-app.io/create-user',true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({name: name, username: username, password: password, idea: idea, age: age}));
+        request.send(JSON.stringify({name,username,password,idea,age}));
 } ;
 
 
