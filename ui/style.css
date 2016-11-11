@@ -50,3 +50,15 @@ p{
 			font-family: Lucida ;
 			margin: 5px;
 	}
+.main{
+		  margin:15px auto;
+		  padding: 30px;
+		  border: 2px solid white;
+		  height: 800px;
+		  width: 800px;
+		  background-color: white;
+		  font-size: x-large;
+
+
+
+	}
