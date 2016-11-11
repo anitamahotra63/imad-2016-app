@@ -78,3 +78,16 @@ input{background-color: rgba(0, 188, 212, 0.25);
     font-size: large;
 margin: 10px;
 border: lightblue;}
+
+#login{
+		background-color: white;
+		margin:20px 20px 0 250px;
+		display: inline-block;
+	}
+	#text{
+		display: inline-block;
+		margin:20px 20px 0 250px;
+	}
+	.first1{
+		width: 260px;
+	}
