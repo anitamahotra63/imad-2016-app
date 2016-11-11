@@ -91,3 +91,15 @@ border: lightblue;}
 	.first1{
 		width: 260px;
 	}
+.welcomePage{
+			height: 250px;
+			width: 600px;
+			border:1px white solid;
+			display: inline-block;
+			margin: 20px 20px 10px 40px;
+		}	
+
+
+
+
+
