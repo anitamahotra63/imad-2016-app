@@ -25,8 +25,7 @@ submit.onclick = function(){
    };
    var username = document.getElementById('username_registered').value;
    var password = document.getElementById('password_registered').value;
-   console.log(username);
-   console.log(password);
+   
    
    request.open('POST','http://anitamahotra63.imad.hasura-app.io/login',true);
    request.setRequestHeader('Content-Type', 'application/json');
