@@ -40,10 +40,6 @@ submit_button_two.onclick = function(){
     
         var request = new XMLHttpRequest();
         
-        
-       //not done yet
-   };
-        
         var name = document.getElementById('name');
         var username = document.getElementById('username');
         var password = document.getElementById('password');
