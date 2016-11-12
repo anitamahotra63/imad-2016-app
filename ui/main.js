@@ -44,8 +44,8 @@ submit_button_two.onclick = function(){
            //Take some action
            
            if(request.status ===200){
-               console.log("logged in successfully");
-               alert('Logged In Successfully');
+               console.log("Signed Up in successfully");
+               alert('Signed Up Successfully');
            }else if(request.status === 403){
                alert('username/password is invalid');
            }else if(request.status === 500){
