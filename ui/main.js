@@ -80,7 +80,7 @@ register.onclick = function () {
                 for (var i=0; i< articleData.length; i++) {
                     content += `
                     <div class = "welcomePage">
-                    <a href="/articles/${articleData[i].title}"><img src="http://www.genderandeducation.com/wp-content/uploads/2010/03/femm1.jpg" height="250px" width="600px"></a>`;
+                    <a href="/articles/${articleData[i].title}"> <img src="http://www.genderandeducation.com/wp-content/uploads/2010/03/femm1.jpg" height="250px" width="600px"> </a>`;
                 }
                 content += '</div>';
                 articles.innerHTML = content;
