@@ -11,7 +11,7 @@ register.onclick = function () {
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
-                  document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong> </span>`;
+                  document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong><br><input type="submit" id="logout" value="Log Out"/> </span>`;
                   loadArticles();
               } else {
                   alert('Could not register the user');
