@@ -15,6 +15,7 @@ log_in.onclick = function(){
            if(request.status === 200){
                console.log("logged in successfully");
                alert('Logged In Successfully');
+               document.getElementbyId('login').innerHTML='<a href="/WelcomePage">Welcome to the home page</a><br>';
            }else if(request.status === 403){
                alert('username/password is invalid');
            }else if(request.status === 500){
