@@ -22,7 +22,7 @@ log_in.onclick = function(){
            }
            else{
                 
-                  alert('Something went wrong on the server');
+                  alert('Something went wrong on the server.try again..');
            }
        }
        //not done yet
