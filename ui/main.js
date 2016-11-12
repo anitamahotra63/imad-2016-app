@@ -86,6 +86,7 @@ function loadLoggedInUser (username) {
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
     `;
+    
 }
 
 function loadLogin () {
@@ -95,7 +96,8 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
-            } else {
+            }
+            {
                 loadLoginForm();
             }
         }
