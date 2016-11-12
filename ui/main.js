@@ -65,3 +65,29 @@ register.onclick = function () {
         submit.value = 'Logging in...';
         
     };
+    
+    function loadArticles () {
+        // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            var articles = document.getElementById('articles');
+            if (request.status === 200) {
+                var content = `<link rel="stylesheet" type="text/css" href="/ui/style.css"> <div>`;
+                var articleData = JSON.parse(this.responseText);
+                for (var i=0; i< articleData.length; i++) {
+                    content += `
+                    <div class = "welcomePage">
+                    <a href="/articles/${articleData[i].title}"><img src="http://www.genderandeducation.com/wp-content/uploads/2010/03/femm1.jpg" height="250px" width="600px"></a>`;
+                }
+                content += '</div>';
+                articles.innerHTML = content;
+            } else {
+                articles.innerHTML('Oops! Could not load all articles!')
+            }
+        }
+    };
+    
+    request.open('GET', '/get-articles', true);
+    request.send(null);
+}
