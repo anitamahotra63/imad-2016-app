@@ -11,6 +11,7 @@ register.onclick = function () {
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
+                  loadArticles();
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
@@ -41,6 +42,7 @@ register.onclick = function () {
               // Take some action
               if (request.status === 200) {
                   submit.value = 'Sucess!';
+                  loadArticles();
               } else if (request.status === 403) {
                   submit.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
