@@ -120,16 +120,6 @@ app.get('/testdb',function(req,res){
    
 });
 
- var names=[];
-app.get('/submit-name',function(req,res){
-    
-    var name=req.query.name;
-    
-    names.push(name);
-    
-    res.send(JSON.stringify(names));
-});
-
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -156,7 +146,7 @@ function createTemplate(data){
 
 app.get('/articles/:ArticleName',function(req,res){
     
-    pool.query("SELECT * FROM articles WHERE title = $1"+ [req.params.ArticleName] , function(err,result){
+    pool.query("SELECT * FROM articles WHERE title = $1", [req.params.ArticleName] , function(err,result){
         if(err){
             res.status(500).send(err.toSring());
         }
