@@ -25,29 +25,7 @@ app.use(session({
     cookie :{ maxAge: 1000*60*60*24*30 }
 }));
 
-function createTemplate(data){
-    var title=data.title;
-    var heading=data.heading;
-    var content=data.content;
-    var htmlTemplate=`<html>
-    <head>
-    	<title>
-    		${title}
-    	</title>
-    	<link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-    	<div id="upper">
-    		
-    	</div>
-    	<div id="heading">
-    		<b>${heading}</b>
-    	</div>
-    	${content}
-    </body>
-    </html>`;
-    return htmlTemplate;
-}
+
 
 app.get('/',function(req,res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
@@ -151,6 +129,30 @@ app.get('/submit-name',function(req,res){
     
     res.send(JSON.stringify(names));
 });
+
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    var htmlTemplate=`<html>
+    <head>
+    	<title>
+    		${title}
+    	</title>
+    	<link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+    	<div id="upper">
+    		
+    	</div>
+    	<div id="heading">
+    		<b>${heading}</b>
+    	</div>
+    	${content}
+    </body>
+    </html>`;
+    return htmlTemplate;
+}
 
 app.get('/articles/:ArticleName',function(req,res){
     
