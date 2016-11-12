@@ -32,7 +32,8 @@ function loadLoginForm () {
                   submit.value = 'Login';
               }
               loadLogin();
-          }  
+              loadArticles();
+            }  
           // Not done yet
         };
         
