@@ -136,4 +136,3 @@ function loadArticles () {
 loadLogin();
 
 // Now this is something that we could have directly done on the server-side using templating too!
-loadArticles();
