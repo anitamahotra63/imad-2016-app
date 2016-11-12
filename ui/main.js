@@ -11,6 +11,7 @@ register.onclick = function () {
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
+                  document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:x-large; margin-left:400px"> You are logged in! </span>`;
                   loadArticles();
               } else {
                   alert('Could not register the user');
@@ -42,6 +43,7 @@ register.onclick = function () {
               // Take some action
               if (request.status === 200) {
                   submit.value = 'Sucess!';
+                  document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:x-large; margin-left:400px"> You are logged in! </span>`;
                   loadArticles();
               } else if (request.status === 403) {
                   submit.value = 'Invalid credentials. Try again?';
