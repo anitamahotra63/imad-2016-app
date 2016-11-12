@@ -133,7 +133,7 @@ function createTemplate(data){
     </head>
     <body>
     	<div id="upper">
-    		
+    		 <a href="/logout" style="font-family:Gabriola; font-size:xx-large; color:white; margin:50px;">Log Out</a>
     	</div>
     	<div id="heading">
     		<b>${heading}</b>
