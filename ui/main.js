@@ -12,7 +12,7 @@ register.onclick = function () {
                   alert('User created successfully');
                   register.value = 'Registered!';
                   document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong>
-                        <input type="submit" id="logout" value="Log Out"/> </span>`;
+                        <a href="/logout">Log Out </span>`;
                   loadArticles();
               } else {
                   alert('Could not register the user');
@@ -96,4 +96,9 @@ register.onclick = function () {
 			</a>
 		</div>
 	</div>`;
+}
+
+var logout_btn=document.getElementById("logout");
+logout_btn.onclick = function(){
+    
 }
