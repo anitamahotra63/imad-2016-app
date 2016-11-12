@@ -12,7 +12,7 @@ log_in.onclick = function(){
        if(request.readyState ===XMLHttpRequest.DONE){
            //Take some action
            
-           if(request.status ===200){
+           if(request.status === 200){
                console.log("logged in successfully");
                alert('Logged In Successfully');
            }else if(request.status === 403){
