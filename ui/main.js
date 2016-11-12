@@ -20,6 +20,10 @@ log_in.onclick = function(){
            }else if(request.status === 500){
                alert('sorry! something went wrong with the server.');
            }
+           else{
+                
+                  alert('Something went wrong on the server');
+           }
        }
        //not done yet
    };
