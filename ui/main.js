@@ -1,4 +1,5 @@
 function loadLoginForm(){
+    
     document.getElementById('upper').innerHTML=`
             <input type="text" id="username" placeholder="username"/>
 			<input type="password" id="password">
@@ -111,7 +112,11 @@ function loadLogin () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
+                if(this.responseText === null){
+                    loadLoginForm();
+                }else{
+                    loadLoggedInUser(this.responseText);
+                }
             } else {
                 loadLoginForm();
             }
