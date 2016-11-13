@@ -113,7 +113,7 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             
             if (request.status === 200){
-                if(this.responseText.toString() === 'YouAreNotLoggedIn'){
+                if(this.responseText === 'YouAreNotLoggedIn'){
                     loadLoginForm();
                 }else{
                     loadLoggedInUser(this.responseText);
