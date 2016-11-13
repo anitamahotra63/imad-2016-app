@@ -129,6 +129,7 @@ function loadLoggedInUser (username) {
         <a href="/logout">Logout</a>
     `;
     loadArticles();
+    
 }
 
-loadLogin();
+loadLoginFunction();
