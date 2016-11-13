@@ -97,7 +97,7 @@ app.get('/check-login',function(req,res){
            if (err) {
               res.status(500).send(err.toString());
            } else {
-              res.send(result.rows[0].username);    
+              res.send(result.rows[0].username.toString());    
            }
        });
    } else {
