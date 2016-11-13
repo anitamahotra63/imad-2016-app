@@ -1,4 +1,10 @@
 function loadLoginForm(){
+    document.getElementById('upper').innerHTML=`
+            <input type="text" id="username" placeholder="username"/>
+			<input type="password" id="password">
+			<input type="submit" id="LogIn" value="Log In">
+			<input type="submit" id="Register" value="Register">
+    `;
     var register = document.getElementById('Register');
     register.onclick = function () {
             // Create a request object
@@ -73,7 +79,7 @@ function loadLoginForm(){
         };
 }
     
-    function loadArticles () {
+function loadArticles () {
         // Check if the user is already logged in
     document.getElementById('articles').innerHTML=`<div>
 		<div class="welcomePage">
@@ -122,4 +128,7 @@ function loadLoggedInUser (username) {
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
     `;
+    loadArticles();
 }
+
+loadLogin();
