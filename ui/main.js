@@ -110,7 +110,7 @@ function loadLogin () {
      var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
+            if (request.status === 200 && this.responseText.toString() !== 'You are not logged in.') {
                 loadLoggedInUser(this.responseText);
             } else {
                 loadLoginForm();
