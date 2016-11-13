@@ -132,4 +132,4 @@ function loadLoggedInUser (username) {
     
 }
 
-loadLoginForm();
+loadLogin();
