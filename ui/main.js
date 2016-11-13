@@ -120,6 +120,9 @@ function loadLogin () {
                 }
             }
         }
+        else{
+            loadLoginForm();
+        }
     };
     
     request.open('GET', '/check-login', true);
