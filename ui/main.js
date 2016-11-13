@@ -1,76 +1,77 @@
-
-var register = document.getElementById('Register');
-register.onclick = function () {
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  alert('User created successfully');
-                  register.value = 'Registered!';
-                  document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong>
-                         <a href="/logout" style="font-family:Gabriola; font-size:xx-large; color:white; margin:50px;">Log Out</a></span>`;
-                  loadArticles();
-              } else {
-                  alert('Could not register the user');
-                  register.value = 'Register';
+function loadLoginForm(){
+    var register = document.getElementById('Register');
+    register.onclick = function () {
+            // Create a request object
+            var request = new XMLHttpRequest();
+            
+            // Capture the response and store it in a variable
+            request.onreadystatechange = function () {
+              if (request.readyState === XMLHttpRequest.DONE) {
+                  // Take some action
+                  if (request.status === 200) {
+                      alert('User created successfully');
+                      register.value = 'Registered!';
+                      document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong>
+                             <a href="/logout" style="font-family:Gabriola; font-size:xx-large; color:white; margin:50px;">Log Out</a></span>`;
+                      loadArticles();
+                  } else {
+                      alert('Could not register the user');
+                      register.value = 'Register';
+                  }
               }
-          }
+            };
+            
+            // Make the request
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            console.log(username);
+            console.log(password);
+            request.open('POST', '/create-user', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(JSON.stringify({username: username, password: password}));  
+            register.value = 'Registering...';
+        
         };
         
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
-        request.open('POST', '/create-user', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        register.value = 'Registering...';
-    
-    };
-    
-    var submit = document.getElementById('LogIn');
-    submit.onclick = function () {
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  submit.value = 'Sucess!';
-                  document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong>
-                   <a href="/logout" style="font-family:Gabriola; font-size:xx-large; color:white; margin:50px;">Log Out</a> </span>`;
-                  loadArticles();
-              } else if (request.status === 403) {
-                  submit.value = 'Invalid credentials. Try again?';
-              } else if (request.status === 500) {
-                  alert('Something went wrong on the server');
-                  submit.value = 'Login';
-              } else {
-                  alert('Something went wrong on the server');
-                  submit.value = 'Login';
-              }
-          }  
-          // Not done yet
+        var submit = document.getElementById('LogIn');
+        submit.onclick = function () {
+            // Create a request object
+            var request = new XMLHttpRequest();
+            
+            // Capture the response and store it in a variable
+            request.onreadystatechange = function () {
+              if (request.readyState === XMLHttpRequest.DONE) {
+                  // Take some action
+                  if (request.status === 200) {
+                      submit.value = 'Sucess!';
+                      document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong>
+                       <a href="/logout" style="font-family:Gabriola; font-size:xx-large; color:white; margin:50px;">Log Out</a> </span>`;
+                      loadArticles();
+                  } else if (request.status === 403) {
+                      submit.value = 'Invalid credentials. Try again?';
+                  } else if (request.status === 500) {
+                      alert('Something went wrong on the server');
+                      submit.value = 'Login';
+                  } else {
+                      alert('Something went wrong on the server');
+                      submit.value = 'Login';
+                  }
+              }  
+              // Not done yet
+            };
+            
+            // Make the request
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            console.log(username);
+            console.log(password);
+            request.open('POST', '/login', true);
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(JSON.stringify({username: username, password: password}));  
+            submit.value = 'Logging in...';
+            
         };
-        
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
-        request.open('POST', '/login', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        submit.value = 'Logging in...';
-        
-    };
+}
     
     function loadArticles () {
         // Check if the user is already logged in
@@ -96,4 +97,29 @@ register.onclick = function () {
 			</a>
 		</div>
 	</div>`;
+}
+
+function loadLogin () {
+    // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadLoggedInUser(this.responseText);
+            } else {
+                loadLoginForm();
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}
+
+function loadLoggedInUser (username) {
+    var loginArea = document.getElementById('');
+    loginArea.innerHTML = `
+        <h3> Hi <i>${username}</i></h3>
+        <a href="/logout">Logout</a>
+    `;
 }
