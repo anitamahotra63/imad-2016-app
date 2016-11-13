@@ -40,8 +40,8 @@ function loadLoginForm(){
         
         };
         
-        var submit = document.getElementById('LogIn');
-        submit.onclick = function () {
+    var submit = document.getElementById('LogIn');
+    submit.onclick = function () {
             // Create a request object
             var request = new XMLHttpRequest();
             
