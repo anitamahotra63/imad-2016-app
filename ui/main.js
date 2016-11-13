@@ -107,23 +107,19 @@ function loadArticles () {
 }
 
 function loadLogin () {
-    // Check if the user is already logged in
-    var request = new XMLHttpRequest();
+     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            
-            if (request.status === 200){
-                if(JSON.stringify(this.responseText) === 'You Are Not Logged In'){
-                    loadLoginForm();
-                }else{
-                    loadLoggedInUser(this.responseText);
-                }
+            if (request.status === 200) {
+                loadLoggedInUser(this.responseText);
+            } else {
+                loadLoginForm();
             }
         }
     };
     
     request.open('GET', '/check-login', true);
-    request.send("hi");
+    request.send(null);
 }
 
 function loadLoggedInUser (username) {
