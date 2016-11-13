@@ -115,7 +115,7 @@ function loadLogin () {
             if (request.status === 200) {
                 if(this.responseText === null){
                     loadLoginForm();
-                }else{
+                }else if(this.responseText !==null ){
                     loadLoggedInUser(this.responseText);
                 }
             }
