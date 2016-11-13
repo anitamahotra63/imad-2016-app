@@ -97,8 +97,3 @@ register.onclick = function () {
 		</div>
 	</div>`;
 }
-
-var logout_btn=document.getElementById("logout");
-logout_btn.onclick = function(){
-    
-}
