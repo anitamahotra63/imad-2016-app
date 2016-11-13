@@ -101,7 +101,7 @@ app.get('/check-login',function(req,res){
            }
        });
    } else {
-       res.send(null);
+       res.status(400).send(null);
    }
 });
 
