@@ -118,8 +118,6 @@ function loadLogin () {
                 }else{
                     loadLoggedInUser(this.responseText);
                 }
-            } else {
-                loadLoginForm();
             }
         }
     };
