@@ -83,22 +83,22 @@ function loadLoginForm(){
 function loadArticles () {
         // Check if the user is already logged in
     document.getElementById('articles').innerHTML=`<div>
-		<div class="welcomePage">
+		<div class="welcomePage" id="pic1">
 			<a href="/articles/Issues" id="pic1">
 				<img src="http://cdn.grantcardone.com/wp-content/uploads/WIP-WomenIssuesTodayWorld-YT-TN.jpg" height="250px" width="600px">
 			</a>
 		</div>
-		<div class="welcomePage" >
+		<div class="welcomePage" id="pic2" >
 			<a href="/articles/Organisations" >
 				<img src="https://i.ytimg.com/vi/1nkWx5_WjnA/maxresdefault.jpg" height="250px" width="600px" id="pic2">
 			</a>
 		</div>
-		<div class="welcomePage">
+		<div class="welcomePage" id="pic3">
 			<a href="/articles/Introduction" id="pic3">
 				<img src="http://www.genderandeducation.com/wp-content/uploads/2010/03/femm1.jpg" height="250px" width="600px">
 			</a>
 		</div>
-		<div class="welcomePage">
+		<div class="welcomePage" id="pic4">
 			<a href="/articles/Contribution" id="pic4">
 				<img src="http://hbz.h-cdn.co/assets/16/10/980x490/landscape-1457447708-hbz-feminists-soc.jpg" height="250px" width="600px">
 			</a>
