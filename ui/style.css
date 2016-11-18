@@ -62,7 +62,7 @@ p{
     margin:15px 15px 15px 100px;
     width:250px;
     height:25px;
-    background-color:lightblue;
+    
     font-size:x-large;
 }
 
@@ -70,6 +70,13 @@ p{
     margin:15px 15px 15px 5px;
     width:250px;
     height:25px;
-    background-color:lightblue;
+    font-size:x-large;
+}
+#LogIn{
+   margin:15px 15px 15px 15px;
+    width:250px;
+    height:25px;
+    font-size:x-large; 
+    background-color:lightred;
 }
 
