@@ -110,7 +110,7 @@ function loadLogin () {
      var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200 && this.responseText.toString() !== 'You are not logged in.') {
+            if (request.status === 200 && this.responseText.toString() != 'You are not logged in.') {
                 loadLoggedInUser(this.responseText);
             } else {
                 loadLoginForm();
@@ -126,7 +126,7 @@ function loadLoggedInUser (username) {
     var loginArea = document.getElementById('upper');
     loginArea.innerHTML = `
         <h3> Hi <i>${username}</i></h3>
-        <a href="/logout">Logout</a>
+        <a href="/logout"><span style="color:white;">Logout</span></a>
     `;
     loadArticles();
     
