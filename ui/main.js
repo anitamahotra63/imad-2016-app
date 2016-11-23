@@ -6,6 +6,9 @@ function loadLoginForm(){
 			<input type="submit" id="LogIn" value="Log In">
 			<input type="submit" id="Register" value="Register">
     `;
+    
+    
+    
     var register = document.getElementById('Register');
     register.onclick = function () {
             // Create a request object
@@ -20,9 +23,15 @@ function loadLoginForm(){
                       register.value = 'Registered!';
                       document.getElementById('upper').innerHTML=`
                       <input type="text" id="username" placeholder="username"/>
+			          
 			          <input type="password" id="password">
+			          
+			          
 			          <input type="submit" id="LogIn" value="Log In">
-			          <span style="color:white; font-size:x-large; font-family:Gabriola>You are registered. Now please log in!</span>
+			          
+			          <span style="color:white; font-size:x-large; font-family:Gabriola>
+			          You are registered. Now please log in!
+			          </span>
                       `;
                       
                   } else {
@@ -44,6 +53,9 @@ function loadLoginForm(){
         
         };
         
+    
+    
+    
     var submit = document.getElementById('LogIn');
     submit.onclick = function () {
             // Create a request object
