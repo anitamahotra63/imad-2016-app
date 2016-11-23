@@ -90,6 +90,7 @@ function load(){
             <input type="text" id="username" placeholder="username"/>
 			<input type="password" id="password">
 			<input type="submit" id="LogIn" value="Log In">
+			<span style:"font-size:xx-large; font-color:white; font-family:Gabriola">Registered Succesfully. Now please log in.</span>
     `;
     
     var submit = document.getElementById('LogIn');
