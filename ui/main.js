@@ -18,9 +18,13 @@ function loadLoginForm(){
                   if (request.status === 200) {
                       alert('User created successfully');
                       register.value = 'Registered!';
-                      document.getElementById('upper').innerHTML=`<span style="font-family:Gabriola; font-size:xx-large; margin-left:500px; color:white "><strong> You are logged in!</strong>
-                             <a href="/logout" style="font-family:Gabriola; font-size:xx-large; color:white; margin:50px;">Log Out</a></span>`;
-                      loadArticles();
+                      document.getElementById('upper').innerHTML=`
+                      <input type="text" id="username" placeholder="username"/>
+			          <input type="password" id="password">
+			          <input type="submit" id="LogIn" value="Log In">
+			          <span style="color:white; font-size:x-large; font-family:Gabriola>You are registered. Now please log in!</span>
+                      `;
+                      
                   } else {
                       alert('Could not register the user');
                       register.value = 'Register';
