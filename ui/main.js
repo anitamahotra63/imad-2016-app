@@ -21,18 +21,7 @@ function loadLoginForm(){
                   if (request.status === 200) {
                       alert('User created successfully');
                       register.value = 'Registered!';
-                      document.getElementById('upper').innerHTML=`
-                      <input type="text" id="username" placeholder="username"/>
-			          
-			          <input type="password" id="password">
-			          
-			          
-			          <input type="submit" id="Log_In" value="Log In">
-			          
-			          <span style="color:white; font-size:x-large; font-family:Gabriola>
-			          You are registered. Now please log in!
-			          </span>
-                      `;
+                      load();
                       
                   } else {
                       alert('Could not register the user');
@@ -54,8 +43,9 @@ function loadLoginForm(){
         };
         
     
-    var SUBMIT = document.getElementById('Log_In');
-    SUBMIT.onclick = function () {
+    
+    var submit = document.getElementById('LogIn');
+    submit.onclick = function () {
             // Create a request object
             var request = new XMLHttpRequest();
             
@@ -92,9 +82,18 @@ function loadLoginForm(){
             submit.value = 'Logging in...';
             
         };
+}
+
+function load(){
     
-    var submit = document.getElementById('LogIn');
-    submit.onclick = function () {
+     document.getElementById('upper').innerHTML=`
+            <input type="text" id="username" placeholder="username"/>
+			<input type="password" id="password">
+			<input type="submit" id="LogIn" value="Log In">
+    `;
+    
+    var SUBMIT = document.getElementById('LogIn');
+    SUBMIT.onclick = function () {
             // Create a request object
             var request = new XMLHttpRequest();
             
