@@ -92,8 +92,8 @@ function load(){
 			<input type="submit" id="LogIn" value="Log In">
     `;
     
-    var SUBMIT = document.getElementById('LogIn');
-    SUBMIT.onclick = function () {
+    var submit = document.getElementById('LogIn');
+    submit.onclick = function () {
             // Create a request object
             var request = new XMLHttpRequest();
             
