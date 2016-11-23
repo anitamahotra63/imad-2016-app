@@ -22,7 +22,7 @@ function loadLoginForm(){
                       <input type="text" id="username" placeholder="username"/>
 			          <input type="password" id="password">
 			          <input type="submit" id="LogIn" value="Log In">
-			          <span style="color:white; font-size:x-large; font-family:Gabriola>You are registered. Now please log in!</span>
+			          <span style="color:"white"; font-size:x-large; font-family:Gabriola>You are registered. Now please log in!</span>
                       `;
                       
                   } else {
